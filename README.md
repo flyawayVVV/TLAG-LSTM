@@ -76,16 +76,18 @@ The model starts with a small number of LSTM layers and progressively adds more 
 
 How It Works
 1. Training Phase:
-(1)The model trains with the current architecture until validation performance stabilizes
-(2)Topological derivatives are calculated for each layer
-(3)If the maximum derivative exceeds the threshold, a new layer is added
+(1)The model trains with the current architecture until validation performance stabilizes;
+(2)Topological derivatives are calculated for each layer;
+(3)If the maximum derivative exceeds the threshold, a new layer is added.
+
 2. Layer Addition:
-(1)The new layer is inserted after the layer with the highest topological derivative
-(2)The layer is initialized using the eigenvector of the Hessian matrix
-(3)A backtracking strategy determines the optimal initialization scale
-3.Convergence:
-(1)The process continues until all layers' topological derivatives fall below the threshold
-(2)The final model represents the optimal network depth for the given dataset
+(1)The new layer is inserted after the layer with the highest topological derivative;
+(2)The layer is initialized using the eigenvector of the Hessian matrix;
+(3)A backtracking strategy determines the optimal initialization scale.
+
+3. Convergence:
+(1)The process continues until all layers' topological derivatives fall below the threshold;
+(2)The final model represents the optimal network depth for the given dataset.
 
 Example Output
 The model produces several output files:
