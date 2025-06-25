@@ -1,5 +1,4 @@
 # TLAG-LSTM
-Topologically Layer Adaptive Growing LSTM
 TLAG-LSTM: Topologically Layer Adaptive Growing LSTM
 Overview
 TLAG-LSTM (Topologically Layer Adaptive Growing LSTM) is a novel deep learning model for streamflow prediction that can dynamically adjust its network architecture during training. Unlike traditional LSTM models with fixed layer counts, TLAG-LSTM uses topological derivative theory to automatically determine:
